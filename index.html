@@ -215,7 +215,10 @@
               <img src="assets/projects/scamshield-app.webp" alt="ScamShield app showing a high-risk scam warning">
             </div>
             <div class="card-body">
-              <h3>ScamShield</h3>
+              <div class="card-head">
+                <h3>ScamShield</h3>
+                <span class="card-date">Sep 2026</span>
+              </div>
               <p>A real time scam call detector.</p>
               <span class="btn btn-primary">View project</span>
             </div>
@@ -228,6 +231,8 @@
       <section class="panel project-page" data-tab="projects/scamshield" data-parent="projects" data-title="ScamShield">
         <a class="back" href="#projects">&larr; Projects</a>
 
+        <h1 class="pp-title">ScamShield</h1>
+
         <div class="pp-grid">
           <!-- Left: video -->
           <div class="pp-media">
@@ -237,32 +242,35 @@
             </div>
           </div>
 
-          <!-- Right: title, summary and sections -->
+          <!-- Right: summary -->
           <div class="pp-text">
-            <h1 class="pp-title">ScamShield</h1>
-            <p class="meta">HackGT 13 &middot; Sep 2026 &middot; Team of 4</p>
-            <p class="pp-summary">ScamShield is an app that detects scam calls in real time. The program transcribes and analyzes phone call audio in 20-second chunks, checking for signs that the call may be a scam, such as common speech patterns or an AI-generated voice. It then displays the likelihood of the call being a scam, the likelihood of the call being AI, and the recommended action for the user to take. After the call, all of this information is sent to an online dashboard so that scam call data can be easily tracked and visualized.</p>
-
-            <!-- Replace each placeholder paragraph with your own text -->
-            <h2>Inspiration</h2>
-            <p class="placeholder">Write about what inspired ScamShield here.</p>
-
-            <h2>How we built it</h2>
-            <p class="placeholder">Write about how the team built ScamShield here.</p>
-            <ul class="tags">
-              <li>C#</li><li>WPF</li><li>Python</li><li>NAudio</li><li>AssemblyAI</li><li>Grok</li>
-            </ul>
-
-            <h2>How it could be improved</h2>
-            <p class="placeholder">Write about what you would improve or add next here.</p>
+            <p class="pp-summary">ScamShield is an app that detects scam calls in real time. The program automatically detects when you accept a call from an unknown caller and starts recording. It then transcribes and analyzes the call audio in 20-second chunks, checking for signs that the call may be a scam, such as common speech patterns of scammers or an AI-generated voice. It displays the likelihood of the call being a scam, the likelihood of the call being AI, and the recommended action for the user to take. After the call, all of this information is sent to an online dashboard so that scam call data can be easily tracked and visualized.</p>
           </div>
+        </div>
+
+        <!-- Sections: full width under the video. Replace each placeholder paragraph with your own text -->
+        <div class="pp-text pp-sections">
+          <h2>Inspiration</h2>
+          <p>This project was developed in a team of 4 for HackGT 13. We chose to build an app that protects against scam calls because of how common online scams are becoming as technology continues to advance. Everyone in our team has had family members affected by these scam calls, and according to a survey from Gallup and the Stop Scams Alliance, nearly 10% of U.S. adults reported that they/their family has lost money from online scammers.</p>
+          <p>Every scam protection app that we found solves the problem by blocking unknown numbers, but this only creates more problems: what if you have an important work call from a number that isn't saved? What if your child needs to make an emergency call from someone else's phone? That is why we made ScamShield to help the user in real time rather than simply blocking unknown callers. That way you'll be safe from scammers, and you won't miss any important calls.</p>
+
+          <h2>How we built it</h2>
+          <p>The main application was built in C# using WPF, and runs in the background as a system tray app. Once it starts recording a call, AssemblyAI transcribes the audio and labels each caller in order to identify which transcription is from the caller and not the user. Every 20 seconds, that information is sent to Grok, which analyzes it and returns a scam likelihood score from 0-100, the reasoning, and the recommended action. All of this is displayed to the user in a pop-up window during the call.</p>
+          <p>To detect AI-generated voices, we used data provided by the National Security Agency to train a deep learning model in Python via PyTorch. The model is based on AASIST, which is a neural network architecture that is designed to detect synthetic/spoofed audio. The model then provides the probability of the audio being AI-generated, and provides it to the user on the same pop-up window.</p>
+          <p>The dashboard is hosted on a webapp. The UI was developed with Next.js, Node.js, and React. MongoDB was used for the data visualizations. The desktop app connects to the dashboard by sending a file with its analysis to the dashboard's API so that the data from the call can be seen on the web app.</p>
+          <ul class="tags">
+            <li>C#</li><li>WPF</li><li>NAudio</li><li>AssemblyAI</li><li>Grok</li><li>Python</li><li>PyTorch</li><li>Next.js</li><li>React</li><li>Node.js</li><li>MongoDB</li><li>Vercel</li>
+          </ul>
+
+          <h2>Areas to improve</h2>
+          <p>One of the largest limitations of this project is that it is only compatible with WhatsApp on desktop, so the main improvement we could implement is to make the app compatible with any kind of call on any device. Another thing that could be added is the ability to make an account on the dashboard, that way you can save your trusted contacts specifically to your account. The dashboard currently only shows the data from our trial runs of the app, but if we were to deploy this for the public to use, we would need a way for multiple people to have their own separate accounts to hold their individual data and contacts.</p>
         </div>
 
         <!-- Bottom: links -->
         <div class="pp-links">
           <a class="btn" href="https://github.com/shreeniketb/scamshield-ai" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="https://devpost.com/software/scamshield-ai-1wag3o" target="_blank" rel="noopener">Devpost</a>
-          <a class="btn" href="https://scamshield-ai-scam-shield8.vercel.app/" target="_blank" rel="noopener">Live dashboard</a>
+          <a class="btn" href="https://scamshield-ai-scam-shield8.vercel.app/" target="_blank" rel="noopener">Dashboard</a>
         </div>
       </section>
 

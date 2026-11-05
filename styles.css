@@ -321,7 +321,13 @@ body[data-tab="intro"] .footer { display: flex; }
 
 /* ---------- Projects ---------- */
 /* Project boxes on the Projects tab: whole box links to the project's page */
-.project-list { display: grid; gap: 1.75rem; }
+/* Two boxes per row; a single project sits on the left */
+.panel.wide > .project-list {
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
 .project-card {
   display: block;
   background: var(--surface);
@@ -333,7 +339,7 @@ body[data-tab="intro"] .footer { display: flex; }
 }
 .project-card:hover { border-color: var(--line); text-decoration: none; }
 .card-media {
-  height: 420px;
+  height: 320px;
   padding: 1.5rem;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
@@ -342,7 +348,9 @@ body[data-tab="intro"] .footer { display: flex; }
 }
 .card-media img { height: 100%; width: auto; max-width: 100%; object-fit: contain; border-radius: 6px; }
 .card-body { padding: 1.4rem 1.75rem 1.6rem; }
-.card-body h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 700; margin: 0 0 0.3rem; }
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; }
+.card-body h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 700; margin: 0; }
+.card-date { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .card-body p { color: var(--text-soft); margin: 0 0 1.1rem; }
 .project-card:hover .btn-primary { background: var(--accent-hover); border-color: var(--accent-hover); }
 
@@ -364,11 +372,11 @@ body[data-tab="intro"] .footer { display: flex; }
 .panel.project-page { max-width: 1180px; }
 .pp-grid {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 3.5rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
 }
-.pp-media { position: sticky; top: 2rem; }
+.pp-sections { margin-top: 1rem; }
 .video { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius); overflow: hidden; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .pp-title {
@@ -376,10 +384,10 @@ body[data-tab="intro"] .footer { display: flex; }
   font-size: clamp(2.4rem, 4vw, 3.2rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  margin: 0 0 0.4rem;
+  margin: 0 0 1.75rem;
 }
-.meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.5rem; }
-.pp-summary { color: var(--text-soft); font-size: 1.05rem; line-height: 1.7; margin-bottom: 0.5rem; }
+/* Larger summary text so it's about as tall as the video beside it */
+.pp-text .pp-summary { color: var(--text-soft); font-size: 1.2rem; line-height: 1.75; margin: 0; }
 .pp-text h2 {
   font-size: 1.3rem;
   margin: 2.5rem 0 0.8rem;
@@ -479,7 +487,8 @@ body.project-view .content { margin-right: 0; }
   .banner { height: 170px; margin-bottom: 2rem; }
   .card-media { height: 320px; padding: 1rem; }
   .pp-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .pp-media { position: static; }
+  .pp-text .pp-summary { font-size: 1.02rem; }
+  .panel.wide > .project-list { grid-template-columns: 1fr; }
 
   .entry-head { flex-direction: column; gap: 0.25rem; }
   .date { text-align: left; white-space: normal; }
