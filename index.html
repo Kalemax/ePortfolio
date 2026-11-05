@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kale Maxwell | ePortfolio</title>
+  <meta name="description" content="ePortfolio of Kale Maxwell, Computer Engineering student at Georgia Tech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Mobile top bar (hidden on desktop) -->
+  <header class="topbar">
+    <span class="topbar-name">Kale Maxwell</span>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <main class="content">
+
+      <!-- ========== INTRO ========== -->
+      <section class="panel" data-tab="intro" data-title="Intro">
+        <!--
+          ADDING PICTURES
+          1. Put the image file in the assets folder (e.g. assets/headshot.jpg).
+          2. Inside the matching box, delete the <span> label and add:
+               <img src="assets/headshot.jpg" alt="Short description">
+          Photos fill the whole box. For logos, add the class "logo" to the box
+          (class="slot logo") so the logo fits inside without being cropped.
+        -->
+        <div class="hero">
+          <h1 class="hero-name">Kale Maxwell</h1>
+          <p class="hero-sub">Computer Engineering Portfolio</p>
+        </div>
+
+        <div class="split">
+          <!-- Summary (left) -->
+          <div class="summary">
+            <h2>Summary</h2>
+            <p>I'm a first-year computer engineering student at Georgia Tech who loves working with computers to build solutions to real-world problems. I plan to concentrate on embedded systems and emerging architectures during my education. Additionally, I plan to pursue a minor in philosophy, which will help me explore the ethics behind engineering and AI.</p>
+          </div>
+
+          <!-- Pictures (right) -->
+          <div class="pics">
+            <div class="slot portrait">
+              <span>Your photo</span>
+            </div>
+            <div class="slot logo">
+              <img src="assets/gt-logo.svg" alt="Georgia Tech logo">
+            </div>
+            <div class="slot">
+              <span>Image</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT ME ========== -->
+      <section class="panel wide" data-tab="about" data-title="About Me">
+        <!-- BANNER PICTURE: change the img src to swap photos (object-position moves the crop) -->
+        <header class="banner">
+          <img src="assets/banners/about-atlanta-night.jpg" alt="" style="object-position: center 60%">
+          <h2>About Me</h2>
+        </header>
+
+        <div class="prose">
+          <p>Since middle school, I have always been fascinated with computers. I initially developed an interest in computer science&mdash;being able to build a whole world with just a keyboard. But seeing the impact my mom has as an electrical engineer, along with helping my dad build my first computer, made my interest extend to hardware as well. This led me to develop a passion for computer engineering, which I am proud to be studying at Georgia Tech.</p>
+          <p>Some of my other interests include piano and math. I have played classical piano for over 14 years, and I worked as a math tutor at Mathnasium for a little over 2 years. Both of these things have taught me valuable skills that I can also apply to my work as an engineer, such as patience and performing well under pressure.</p>
+        </div>
+
+        <!-- Photos: two equal photos, centered (object-position moves the crop) -->
+        <div class="photo-row">
+          <img src="assets/about/circuit.webp" alt="Kale wiring a circuit on a breadboard" style="object-position: right center">
+          <img src="assets/about/piano.webp" alt="Kale playing a grand piano at a recital" style="object-position: center bottom">
+        </div>
+      </section>
+
+      <!-- ========== RESUME ========== -->
+      <section class="panel" data-tab="resume" data-title="Resume">
+        <div class="section-head">
+          <h2>Resume</h2>
+          <a class="btn btn-primary" href="assets/Kale-Maxwell-Resume.pdf" download>Download PDF</a>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="label">Education</h3>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>Georgia Institute of Technology</h4>
+                <p class="sub">Bachelor of Science in Computer Engineering &middot; GPA 4.00</p>
+              </div>
+              <p class="date">Aug 2026 &ndash; Present<br><span class="muted">Expected May 2029</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="label">Experience</h3>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>Mathnasium</h4>
+                <p class="sub">Math Instructor &middot; Lawrenceville, GA</p>
+              </div>
+              <p class="date">Aug 2024 &ndash; Aug 2026</p>
+            </div>
+            <p class="desc">Mathnasium is a learning center for students K-12 to strengthen their math skills and build confidence via one-on-one and small group tutoring sessions.</p>
+            <ul>
+              <li>Improved math grades/SAT scores for ~90% of students within a semester by delivering personalized math tutoring to 25&ndash;30 students per week.</li>
+              <li>Instructed 150+ students over the course of 2 years.</li>
+              <li>Communicated detailed updates on student progress to parents after sessions, enabling adjustments to improve future sessions based on student needs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="label">Projects</h3>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>ScamShield</h4>
+                <p class="sub">Software Developer &middot; C#, WPF, Python</p>
+              </div>
+              <p class="date">Sep 2026</p>
+            </div>
+            <p class="desc">ScamShield is a live scam call detection tool that records phone calls in real time, transcribes audio via AssemblyAI, and analyzes the likelihood of the call being a scam as well as if the call is AI generated. Results are then sent to a web dashboard. Built in a team of four for HackGT 13.</p>
+            <ul>
+              <li>Developed a system tray application that auto-detects incoming WhatsApp calls from unknown numbers and begins recording and analysis without user intervention.</li>
+              <li>Built a real-time audio pipeline that records microphone and system audio and sends 20-second chunks to AssemblyAI for speaker-labeled transcription.</li>
+              <li>Analyzed conversations with Grok to generate a scam likelihood score, displaying a live popup window containing the reasons for the score and the recommended action.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>Eco-Anxiety</h4>
+                <p class="sub">Game Developer &middot; Unity, C#</p>
+              </div>
+              <p class="date">Fall 2024 &ndash; Spring 2025</p>
+            </div>
+            <p class="desc">Eco-Anxiety is a first-person horror game where players must collect litter in a dark forest before a monster catches them. Developed in a team of four for the Games for Change 2024&ndash;2025 Student Challenge.</p>
+            <ul>
+              <li>Designed and implemented a home screen UI featuring rules display and access to the game, reducing player confusion and ensuring smooth game entry.</li>
+              <li>Collaborated to develop and test 5+ different gameplay mechanics.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="label">Skills</h3>
+          <dl class="skills">
+            <dt>Languages</dt>
+            <dd>Java, C#, Python, JavaScript, HTML, CSS</dd>
+            <dt>Platforms/Tools</dt>
+            <dd>VS Code, Visual Studio, Git, GitHub, Unity, WPF, NAudio</dd>
+            <dt>Spoken</dt>
+            <dd>English (native/fluent), Spanish (intermediate)</dd>
+          </dl>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="label">Leadership</h3>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>National Honors Society</h4>
+                <p class="sub">Officer</p>
+              </div>
+              <p class="date">Aug 2024 &ndash; May 2026</p>
+            </div>
+            <ul>
+              <li>Mobilized 50+ students to participate in various community service projects, such as park cleanups.</li>
+              <li>Organized monthly meetings for 18 months with members to promote volunteering opportunities.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h4>Spanish National Honors Society</h4>
+                <p class="sub">Vice-President</p>
+              </div>
+              <p class="date">Aug 2024 &ndash; May 2025</p>
+            </div>
+            <ul>
+              <li>Tutored students in Spanish on a weekly basis during the school year.</li>
+              <li>Led 8 meetings to promote Spanish events/culture to students.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section class="panel wide" data-tab="projects" data-title="Projects">
+        <!-- BANNER PICTURE: change the img src to swap photos (object-position moves the crop) -->
+        <header class="banner">
+          <img src="assets/banners/projects-circuit-dark.jpg" alt="" style="object-position: center 45%">
+          <h2>Projects</h2>
+        </header>
+
+        <article class="project">
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/sgjYvo5tX58" title="ScamShield demo video"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <h3>ScamShield</h3>
+              <span class="meta">HackGT 13 &middot; Sep 2026 &middot; Team of 4</span>
+            </div>
+            <p>A live scam call detector. It listens to calls from unknown numbers, transcribes the conversation in 20-second chunks, and scores each chunk for scam risk and AI-generated voice. If the risk crosses a threshold, the person on the call gets a popup warning and family members are notified at the same time, so no one has to judge a high-pressure call alone.</p>
+            <ul class="tags">
+              <li>C#</li><li>WPF</li><li>Python</li><li>NAudio</li><li>AssemblyAI</li><li>Grok</li>
+            </ul>
+            <div class="links">
+              <a href="https://devpost.com/software/scamshield-ai-1wag3o" target="_blank" rel="noopener">Devpost</a>
+              <a href="https://github.com/shreeniketb/scamshield-ai" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://scamshield-ai-scam-shield8.vercel.app/" target="_blank" rel="noopener">Live dashboard</a>            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ========== CAREER GOALS ========== -->
+      <section class="panel" data-tab="goals" data-title="Career Goals">
+        <h2>Career Goals</h2>
+        <!-- DRAFT: placeholder text, edit freely -->
+        <div class="goals">
+          <div class="goal">
+            <span class="goal-when">Short term</span>
+            <p>Land a software engineering internship for Summer 2027 and keep building projects through hackathons and student organizations.</p>
+          </div>
+          <div class="goal">
+            <span class="goal-when">During college</span>
+            <p>Build a strong foundation in both hardware and software, explore areas like embedded systems and applied AI, and gain more team and leadership experience.</p>
+          </div>
+          <div class="goal">
+            <span class="goal-when">Long term</span>
+            <p>Work as a software engineer on products that make a real difference in people's lives, like tools that keep people safe.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========== SIDEBAR (right) ========== -->
+    <nav id="sidebar" class="sidebar" aria-label="Sections">
+      <div class="sidebar-inner">
+        <ul class="nav">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#goals">Career Goals</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ========== FOOTER BAR ========== -->
+  <footer class="footer">
+    <a href="mailto:kmaxwell41@gatech.edu">kmaxwell41@gatech.edu</a>
+    <a href="tel:+16784306744">678-430-6744</a>
+    <a href="https://www.linkedin.com/in/kale-maxwell-1524b9432/" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <!--
+    Banner photo credits (Unsplash, free to use):
+    projects-circuit-dark.jpg: Nicolas Thomas
+    about-atlanta-night.jpg: Venti Views
+  -->
+</body>
+</html>
