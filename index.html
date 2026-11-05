@@ -203,26 +203,67 @@
           <h2>Projects</h2>
         </header>
 
-        <article class="project">
-          <div class="video">
-            <iframe src="https://www.youtube-nocookie.com/embed/sgjYvo5tX58" title="ScamShield demo video"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <div class="project-head">
-              <h3>ScamShield</h3>
-              <span class="meta">HackGT 13 &middot; Sep 2026 &middot; Team of 4</span>
+        <!--
+          ADDING A PROJECT
+          1. Copy one <a class="project-card"> box below and change its link, picture, name and description.
+          2. Copy the ScamShield page section further down (data-tab="projects/scamshield"),
+             give it the same name as the box's link (e.g. data-tab="projects/my-project"), and fill it in.
+        -->
+        <div class="project-list">
+          <a class="project-card" href="#projects/scamshield">
+            <div class="card-media">
+              <img src="assets/projects/scamshield-app.webp" alt="ScamShield app showing a high-risk scam warning">
             </div>
-            <p>ScamShield is an app that detects scam calls in real time. The program transcribes and analyzes phone call audio in 20-second chunks, checking for signs that the call may be a scam, such as common speech patterns or an AI-generated voice. It then displays the likelihood of the call being a scam, the likelihood of the call being AI, and the recommended action for the user to take. After the call, all of this information is sent to an online dashboard so that scam call data can be easily tracked and visualized.</p>
+            <div class="card-body">
+              <h3>ScamShield</h3>
+              <p>A real time scam call detector.</p>
+              <span class="btn btn-primary">View project</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========== PROJECT PAGE: SCAMSHIELD ========== -->
+      <!-- Project pages hide the sidebar and use the full width (see .project-page in styles.css) -->
+      <section class="panel project-page" data-tab="projects/scamshield" data-parent="projects" data-title="ScamShield">
+        <a class="back" href="#projects">&larr; Projects</a>
+
+        <div class="pp-grid">
+          <!-- Left: video -->
+          <div class="pp-media">
+            <div class="video">
+              <iframe src="https://www.youtube-nocookie.com/embed/sgjYvo5tX58" title="ScamShield demo video"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Right: title, summary and sections -->
+          <div class="pp-text">
+            <h1 class="pp-title">ScamShield</h1>
+            <p class="meta">HackGT 13 &middot; Sep 2026 &middot; Team of 4</p>
+            <p class="pp-summary">ScamShield is an app that detects scam calls in real time. The program transcribes and analyzes phone call audio in 20-second chunks, checking for signs that the call may be a scam, such as common speech patterns or an AI-generated voice. It then displays the likelihood of the call being a scam, the likelihood of the call being AI, and the recommended action for the user to take. After the call, all of this information is sent to an online dashboard so that scam call data can be easily tracked and visualized.</p>
+
+            <!-- Replace each placeholder paragraph with your own text -->
+            <h2>Inspiration</h2>
+            <p class="placeholder">Write about what inspired ScamShield here.</p>
+
+            <h2>How we built it</h2>
+            <p class="placeholder">Write about how the team built ScamShield here.</p>
             <ul class="tags">
               <li>C#</li><li>WPF</li><li>Python</li><li>NAudio</li><li>AssemblyAI</li><li>Grok</li>
             </ul>
-            <div class="links">
-              <a href="https://devpost.com/software/scamshield-ai-1wag3o" target="_blank" rel="noopener">Devpost</a>
-              <a href="https://github.com/shreeniketb/scamshield-ai" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://scamshield-ai-scam-shield8.vercel.app/" target="_blank" rel="noopener">Live dashboard</a>            </div>
+
+            <h2>How it could be improved</h2>
+            <p class="placeholder">Write about what you would improve or add next here.</p>
           </div>
-        </article>
+        </div>
+
+        <!-- Bottom: links -->
+        <div class="pp-links">
+          <a class="btn" href="https://github.com/shreeniketb/scamshield-ai" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://devpost.com/software/scamshield-ai-1wag3o" target="_blank" rel="noopener">Devpost</a>
+          <a class="btn" href="https://scamshield-ai-scam-shield8.vercel.app/" target="_blank" rel="noopener">Live dashboard</a>
+        </div>
       </section>
 
       <!-- ========== CAREER GOALS ========== -->

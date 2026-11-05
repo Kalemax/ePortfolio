@@ -1,4 +1,5 @@
 // Shows one tab at a time based on the URL hash (#intro, #about, ...).
+// Project pages use #projects/<name> and keep the Projects tab highlighted.
 const panels = document.querySelectorAll(".panel");
 const navLinks = document.querySelectorAll(".nav a");
 const sidebar = document.getElementById("sidebar");
@@ -11,8 +12,16 @@ function showTab() {
   const tab = target.dataset.tab;
   document.body.dataset.tab = tab; // lets CSS show the footer only on Intro
 
-  panels.forEach((p) => p.classList.toggle("active", p === target));
-  navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + tab));
+  panels.forEach((p) => {
+    // Reloading a video's iframe stops it, so it doesn't keep playing after you leave the page
+    if (p.classList.contains("active") && p !== target) {
+      p.querySelectorAll("iframe").forEach((f) => { f.src = f.src; });
+    }
+    p.classList.toggle("active", p === target);
+  });
+  const navTab = target.dataset.parent || tab;
+  document.body.classList.toggle("project-view", Boolean(target.dataset.parent)); // hides the sidebar
+  navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + navTab));
 
   document.title = tab === "intro"
     ? "Kale Maxwell | ePortfolio"
