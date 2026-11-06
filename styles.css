@@ -273,6 +273,55 @@ body[data-tab="intro"] .footer { display: flex; }
 /* ---------- About ---------- */
 .prose p { color: var(--text-soft); font-size: 1.02rem; }
 
+/* About Me sections: text first, picture/video underneath, thin line between sections */
+.about-block + .about-block {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.about-block h3 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.about-block p { color: var(--text-soft); font-size: 1.02rem; line-height: 1.7; }
+.about-block .photo-row { margin-top: 1.5rem; }
+/* Section with its photo to the right of the text */
+.about-block.side {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2.5rem;
+  align-items: center;
+}
+.about-block.side p { margin-bottom: 0; }
+.side-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Video next to a photo, with a small caption underneath */
+.photo-row { align-items: start; }
+.video-fig { margin: 0; }
+.video-fig video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  background: #000;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.video-fig figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
 /* ---------- Resume ---------- */
 .section-head {
   display: flex;
@@ -487,6 +536,8 @@ body.project-view .content { margin-right: 0; }
   .banner { height: 170px; margin-bottom: 2rem; }
   .card-media { height: 320px; padding: 1rem; }
   .pp-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-block.side { grid-template-columns: 1fr; gap: 1.5rem; }
+  .side-photo { max-width: 320px; margin: 0 auto; }
   .pp-text .pp-summary { font-size: 1.02rem; }
   .panel.wide > .project-list { grid-template-columns: 1fr; }
 

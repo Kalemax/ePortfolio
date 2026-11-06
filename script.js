@@ -16,6 +16,7 @@ function showTab() {
     // Reloading a video's iframe stops it, so it doesn't keep playing after you leave the page
     if (p.classList.contains("active") && p !== target) {
       p.querySelectorAll("iframe").forEach((f) => { f.src = f.src; });
+      p.querySelectorAll("video").forEach((v) => v.pause());
     }
     p.classList.toggle("active", p === target);
   });

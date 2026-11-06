@@ -68,15 +68,34 @@
           <h2>About Me</h2>
         </header>
 
-        <div class="prose">
+        <!-- Three sections, each with its text first and its picture/video underneath
+             (object-position on a photo moves the crop) -->
+        <!-- Text on the left, photo on the right -->
+        <div class="about-block side">
+          <div>
+          <h3>Computer Engineering</h3>
           <p>My passion for computer engineering started in middle school, when I took my first computer science classes. I was thrilled with the idea of being able to build a whole world with just a keyboard, and I started exploring web development and video game design in high school. As time went on, I began getting exposure to hardware as well, whether it be from my mom's work as an electrical engineer or from helping my dad build my first computer. All of these experiences are what made me want to pursue computer engineering, which I am proud to be studying at Georgia Tech.</p>
-          <p>Some of my other interests include piano and math. I have played classical piano for over 14 years, and I worked as a math tutor at Mathnasium for a little over 2 years. Both of these things have taught me valuable skills that I can also apply to my work as an engineer, such as patience and performing well under pressure.</p>
+          </div>
+          <img class="side-photo" src="assets/about/circuit.webp" alt="Kale wiring a circuit on a breadboard" style="object-position: right center">
         </div>
 
-        <!-- Photos: two equal photos, centered (object-position moves the crop) -->
-        <div class="photo-row">
-          <img src="assets/about/circuit.webp" alt="Kale wiring a circuit on a breadboard" style="object-position: right center">
-          <img src="assets/about/piano.webp" alt="Kale playing a grand piano at a recital" style="object-position: center bottom">
+        <div class="about-block">
+          <h3>Work Experience</h3>
+          <p>For a little over two years, I worked as a math instructor at Mathnasium. Every week I would tutor students K-12 in small group sessions with curricula personalized to each student. Working with such a wide variety of students throughout my time at this job taught me valuable skills such as patience and adaptability, both of which have helped me improve as a student and an engineer.</p>
+        </div>
+
+        <div class="about-block">
+          <h3>Other Interests</h3>
+          <p>Outside of engineering, one of my biggest passions is playing classical piano. I started piano lessons when I was 4 years old, and I grew a love for classical music in 8th grade after hearing Chopin's music for the first time. I went on to play music for several events at my high school, and competed in a few classical music competitions as well. Overall, piano has made me much more disciplined, and taught me how to perform well under pressure.</p>
+          <div class="photo-row">
+            <img src="assets/about/piano.webp" alt="Kale playing a grand piano at a recital" style="object-position: center bottom">
+            <figure class="video-fig">
+              <video controls preload="metadata" poster="assets/about/piano-elegie-poster.jpg">
+                <source src="assets/about/piano-elegie.mp4" type="video/mp4">
+              </video>
+              <figcaption>Elegie, Op. 3 No. 1 by Rachmaninoff</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
